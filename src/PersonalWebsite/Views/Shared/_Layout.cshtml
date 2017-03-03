@@ -16,23 +16,51 @@
     <script src="~/js/materialize-jquery.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Erik Killops</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a asp-controller="Home" asp-action="About">About</a></li>
-                <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
-            </ul>
-            <a href="#" data-activates="hamburger" class="button-collapse right"><i class="material-icons">menu</i></a>
-            <ul class="side-nav" id="hamburger">
-                <li><a asp-controller="Home" asp-action="About">About</a></li>
-                <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div>
+    <div class="navbar-fixed">
+        <nav class="blue-grey lighten-2">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Erik Killops</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                </ul>
+                <a href="#" data-activates="hamburger" class="button-collapse right"><i class="material-icons">menu</i></a>
+                <ul class="side-nav" id="hamburger">
+                    <li><a asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="~/img/coffee-wide.jpg"></div>
+    </div>
+    <div class="container">
         @RenderBody()
     </div>
+    <br />
+    <footer class="page-footer orange accent-2">
+        <div class="container">
+            <div class="row">
+                <div class="col m6 s12">
+                    <h5 class="white-text">Company Bio</h5>
+                    <p class="grey-text text-lighten-4">Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante.</p>
+                </div>
+                <div class="col m3 offset-m3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="white-text" href="https://github.com/ekillops">Github</a></li>
+                        <li><a class="white-text" href="www.linkedin.com/in/ekillops">LinkedIn</a></li>
+                        <li><a class="white-text" href="mailto:erik.killops@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span class="">© 2017 Erik Killops</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

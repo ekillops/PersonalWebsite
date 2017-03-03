@@ -17,8 +17,8 @@ namespace PersonalWebsite.Controllers
 
         public IActionResult Projects()
         {
-            Project.GetTopThreeStarred();
-            return View();
+            var repos = Project.GetTopThreeStarred();
+            return View(repos);
         }
     }
 }
