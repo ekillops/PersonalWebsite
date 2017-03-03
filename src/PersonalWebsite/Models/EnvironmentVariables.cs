@@ -2,6 +2,7 @@
 {
     public static class EnvironmentVariables
     {
-        public static readonly string GhApiToken = "bede7203a4f24d21244519e1b093783ef1024ce3";
+        public static readonly string GhApiToken = "4a4bd0c2cdd00d487a6b7c5bd071e29f0665831a";
+        public static readonly string GhTokenName = "PersonalWebsite";
     }
 }

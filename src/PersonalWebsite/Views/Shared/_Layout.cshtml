@@ -13,24 +13,24 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     @* Materialize JS *@
     <script src="~/js/materialize.js"></script>
+    <script src="~/js/materialize-jquery.js"></script>
 </head>
 <body>
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Erik Killops</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
-                </ul>
-                <a href="#" data-activates="hamburger" class="button-collapse right"><i class="material-icons">menu</i></a>
-                <ul class="side-nav" id="hamburger">
-                    <li><a asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Erik Killops</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a asp-controller="Home" asp-action="About">About</a></li>
+                <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+            </ul>
+            <a href="#" data-activates="hamburger" class="button-collapse right"><i class="material-icons">menu</i></a>
+            <ul class="side-nav" id="hamburger">
+                <li><a asp-controller="Home" asp-action="About">About</a></li>
+                <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div>
         @RenderBody()
     </div>
