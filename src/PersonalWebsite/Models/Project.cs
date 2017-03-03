@@ -9,10 +9,31 @@ namespace PersonalWebsite.Models
     public static class Project
     {
 
+        public static List<RepoQuery> GetTopThree()
+        {
+            RestClient client = new RestClient("https://api.github.com/");
+            RestRequest request = new RestRequest("search/repositories?user=ekillops&sort=stars&order=desc&access_token=" + EnvironmentVariables.GhApiToken);
+            request.AddHeader("User-Agent", EnvironmentVariables.GhTokenName);
+
+            RestResponse response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+
+            List<RepoQuery> topThree = JsonConvert.DeserializeObject<List<RepoQuery>>(response.Content);
+
+            return topThree;
+        }
+
+
+        // OLD VERSION
+
         public static List<RepoQuery> GetTopThreeStarred()
         {
             RestClient client = new RestClient("https://api.github.com/");
-            RestRequest request = new RestRequest("users/ekillops/repos?access_token=" + EnvironmentVariables.GhApiToken);
+            RestRequest request = new RestRequest("users/ekillops/repos?per_page=100&access_token=" + EnvironmentVariables.GhApiToken);
             request.AddHeader("User-Agent", EnvironmentVariables.GhTokenName);
 
             RestResponse response = new RestResponse();

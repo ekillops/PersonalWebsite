@@ -15,7 +15,13 @@
                 </div>*@
             <div class="card-content">
                 <span class="card-title">@repo.full_name</span>
-                <p>Stars: @repo.stargazers_count</p>
+                <p>
+                    @for (var i = 0; i <= repo.stargazers_count; i++)
+                    {
+                        <i class="material-icons tiny">star</i>
+                    }
+                </p>
+                <p>@repo.description</p>
             </div>
             <div class="card-action">
                 <a href="@repo.html_url">View Repository</a>
