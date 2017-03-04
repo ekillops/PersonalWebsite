@@ -1,19 +1,4 @@
-﻿/*nav ul li a{
-    color:; 
-}
-
-h3 {
-    color:;
-}
-
-.valign-center {
-  display: inline-flex;
-  vertical-align: middle;
-  align-items: center;
-}*/
-
-
-
+﻿
 @media only screen and (min-width: 992px) {
     a.brand-logo {
         padding-left: 20px;
@@ -30,13 +15,15 @@ h3 {
 
 @media only screen and (max-width: 992px) {
     .parallax img {
-        max-width: 300%;
+        max-width: 250%;
     }
 
     .parallax-container {
         height: 250px;
+        width: 100%;
     }
 }
+
 
 body {
     display: flex;
